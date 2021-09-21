@@ -1,0 +1,52 @@
+fun diffEls (arr: Array <Int>) : Int {
+    //mushaobis principi: arrayis elementebs shevitant mutable setshi da set "gafiltravs" unikalurebs. 
+    //misi size ki iqneba unikaluri elementebis raodenobis machvenebeli
+    var newSet = mutableSetOf<Int>()
+    for (element in arr){
+         newSet.add(element)
+    }
+    return newSet.size
+}
+
+// fun shared: Array<int> (arr1:Array <int>, arr2: Array<int>){
+//     for (index in arr1){
+//         for (i in arr2.indices){
+//             if arr1[index]=arr2[i] shared:Array <int> (arr1[index])
+//             continue
+//         }
+//     }
+//     println(shared())
+// }
+// 
+fun united (arra: List <int> , arrb: List <int>){
+    //gaertianeba gulisxmobs oriveshi unikaluri elementebis ertobliobas, amitom gamoviyenebt 
+    //pirveli funqciis msgavs midgomas da setshi davamatebt orive simravlis elementebs
+    var setUnited = mutableSetOf <int>()
+    for (element in arra){
+         setUnited.add(element)
+    }
+    for (element in arrb){
+         
+        setUnited.add(element)
+    }
+    println(setUnited(element))
+}
+
+fun lessThanAverage(arr2: List <Int>){
+    //mushaobis principi: axal sheqmnil list-shi gamoviyenebt filter-s
+   var sum=0
+    for (i in arr2.indices){
+        sum+= arr2[i]}
+   var newArray = arr2.filter{ it < sum/arr2.size}
+   
+   println("newArray(element)")
+   }
+
+fun main(){
+    var setExample = Array <Int> {4, 5, 5, 6, 10}
+    diffEls (setExample)
+    
+    var ltvExample : List<Int> = listOf (3,5,7,9,1,2)
+    lessThanAverage(ltvExample)
+    
+}
